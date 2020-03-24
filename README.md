@@ -4,8 +4,8 @@
 
 ## About
 
-A simple GODOT demo to test selection and moving units like in RTS games. 
-You can also choose a formation shape for your units and some other parameter.
+A simple GODOT demo to test selection and move with units like in RTS games. 
+You can also choose a formation shape for your units and some others parameters.
 
 ## Set up the demo in GODOT
 
