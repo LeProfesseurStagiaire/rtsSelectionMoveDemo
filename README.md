@@ -1,8 +1,18 @@
 # rts Selection and Movement Demo
-A simple DEMO to test selection and move like in RTS games.
-
 
 ![banner](rtsSelectMoveDemo/git_content/rect982.png)
+
+## About
+
+A simple GODOT demo to test selection and moving units like in RTS games. 
+You can also choose a formation shape for your units and some other parameter.
+
+## In game inputs
+
+- Left click : 
+  - Drag to expand a shape to select units.
+  - Click on the UI to change parameter in runtime. 
+- Right click : Move the selected units around your cursor position. 
 
 
 ## Content
