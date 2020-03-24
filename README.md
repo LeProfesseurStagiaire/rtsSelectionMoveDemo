@@ -7,6 +7,12 @@
 A simple GODOT demo to test selection and moving units like in RTS games. 
 You can also choose a formation shape for your units and some other parameter.
 
+## Set up the demo in GODOT
+
+- Open Godot
+- click on 'import' and choose the "project.godot" file on the project folder
+- Them you have access to the project edition, press F5 to launch project !
+
 ## In game inputs
 
 - Left click : 
