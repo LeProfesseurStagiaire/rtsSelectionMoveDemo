@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/theme/selection.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/selection/select.gd" type="Script" id=2]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+[node name="select" type="Control"]
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="aera" type="Area2D" parent="."]
+
+[node name="col" type="CollisionShape2D" parent="aera"]
+shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="select_shape" type="Panel" parent="."]
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

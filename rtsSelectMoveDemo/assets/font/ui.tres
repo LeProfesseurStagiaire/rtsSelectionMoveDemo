@@ -1,0 +1,11 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/font/Anton-Regular.ttf"
+
+[resource]
+size = 80
+outline_size = 2
+outline_color = Color( 0.0980392, 0.713726, 0.584314, 1 )
+use_filter = true
+font_data = SubResource( 1 )

@@ -1,0 +1,42 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "    
+shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+uniform bool visible;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+	if (visible){
+		a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+		maxa = max(a, maxa);
+		mina = min(a, mina);
+	
+		a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+		maxa = max(a, maxa);
+		mina = min(a, mina);
+	
+		a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+		maxa = max(a, maxa);
+		mina = min(a, mina);
+	
+		a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+		maxa = max(a, maxa);
+		mina = min(a, mina);
+	}
+
+	COLOR = mix(col, outline_color, maxa - mina);
+}"
+
+[resource]
+shader = SubResource( 1 )
+shader_param/outline_width = 1.5
+shader_param/outline_color = Color( 0.439216, 0.796078, 0.443137, 1 )
+shader_param/visible = false

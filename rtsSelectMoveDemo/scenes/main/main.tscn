@@ -1,0 +1,280 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://assets/img/ui/ui_panel.png" type="Texture" id=1]
+[ext_resource path="res://scenes/selection/select.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/main/main.gd" type="Script" id=3]
+[ext_resource path="res://assets/font/ui.tres" type="DynamicFont" id=4]
+[ext_resource path="res://auto_tileset_with_coll_nav.tres" type="TileSet" id=5]
+[ext_resource path="res://assets/img/ui/formation_button_triangle.png" type="Texture" id=6]
+[ext_resource path="res://assets/img/ui/formation_button_square.png" type="Texture" id=7]
+[ext_resource path="res://assets/img/ui/formation_button_circle_full.png" type="Texture" id=8]
+[ext_resource path="res://assets/img/ui/formation_button_random.png" type="Texture" id=9]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 107.0
+modulate_color = Color( 0.831373, 1, 0.701961, 1 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 107.0
+modulate_color = Color( 0.6, 0.666667, 0.541176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+margin_left = 107.0
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 107.0
+modulate_color = Color( 0.00784314, 0.301961, 0.2, 1 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 107.0
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 107.0
+modulate_color = Color( 0.831373, 1, 0.701961, 1 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 107.0
+modulate_color = Color( 0.6, 0.666667, 0.541176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+margin_left = 107.0
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 107.0
+modulate_color = Color( 0.00784314, 0.301961, 0.2, 1 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 107.0
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 108.0
+modulate_color = Color( 0.831373, 1, 0.701961, 1 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 108, 108 )
+modulate_color = Color( 0.6, 0.666667, 0.541176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 107.0
+modulate_color = Color( 0.00784314, 0.301961, 0.2, 1 )
+
+[sub_resource type="StyleBoxTexture" id=14]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 107.0
+
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 108.0
+modulate_color = Color( 0.831373, 1, 0.701961, 1 )
+
+[sub_resource type="StyleBoxTexture" id=16]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 108, 108 )
+modulate_color = Color( 0.6, 0.666667, 0.541176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=17]
+
+[sub_resource type="StyleBoxTexture" id=18]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 108, 108 )
+modulate_color = Color( 0.00784314, 0.301961, 0.2, 1 )
+
+[sub_resource type="StyleBoxTexture" id=19]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 108, 108 )
+margin_left = 107.0
+
+[sub_resource type="DynamicFontData" id=20]
+font_path = "res://assets/font/Anton-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=21]
+size = 20
+outline_size = 2
+outline_color = Color( 0.0980392, 0.713726, 0.584314, 1 )
+use_filter = true
+font_data = SubResource( 20 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 50
+outline_size = 2
+outline_color = Color( 0.0980392, 0.713726, 0.584314, 1 )
+use_filter = true
+font_data = SubResource( 20 )
+
+[node name="main" type="Node2D"]
+script = ExtResource( 3 )
+nb_of_units = 10
+
+[node name="nav" type="Navigation2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="nav"]
+position = Vector2( 229.116, 99.4846 )
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 5 )
+format = 1
+tile_data = PoolIntArray( -131074, 0, 7, -131073, 0, 196612, -196608, 0, 196612, -196607, 0, 196612, -196606, 0, 196612, -196605, 0, 196612, -196604, 0, 8, -65542, 0, 7, -65541, 0, 196612, -65540, 0, 196612, -65539, 0, 196612, -65538, 0, 196609, -65537, 0, 131078, -131072, 0, 131078, -131071, 0, 131078, -131070, 0, 131078, -131069, 0, 131078, -131068, 0, 196610, -131067, 0, 2, -131066, 0, 2, -131065, 0, 262148, -131064, 0, 196612, -131063, 0, 262149, -131062, 0, 2, -131061, 0, 2, -131060, 0, 2, -131059, 0, 1, -131056, 0, 0, -131055, 0, 2, -131054, 0, 3, -131053, 0, 2, -131052, 0, 2, -131051, 0, 1, -7, 0, 7, -6, 0, 196609, -5, 0, 131078, -4, 0, 131078, -3, 0, 131078, -2, 0, 131078, -1, 0, 131078, -65536, 0, 131078, -65535, 0, 131078, -65534, 0, 131078, -65533, 0, 131078, -65532, 0, 131077, -65529, 0, 131076, -65528, 0, 131078, -65527, 0, 131077, -65523, 0, 65539, -65522, 0, 2, -65521, 0, 2, -65520, 0, 65537, -65518, 0, 65538, -65515, 0, 65538, 65529, 0, 327682, 65530, 0, 196613, 65531, 0, 131073, 65532, 0, 131078, 65533, 0, 131078, 65534, 0, 131078, 65535, 0, 131078, 0, 0, 131078, 1, 0, 131078, 2, 0, 131078, 3, 0, 131078, 4, 0, 196610, 5, 0, 2, 6, 0, 2, 7, 0, 327684, 8, 0, 196613, 9, 0, 327685, 10, 0, 2, 11, 0, 262148, 12, 0, 196612, 13, 0, 262147, 18, 0, 65536, 19, 0, 2, 20, 0, 2, 21, 0, 65540, 131065, 0, 65538, 131067, 0, 131076, 131068, 0, 131078, 131069, 0, 131078, 131070, 0, 131078, 131071, 0, 131078, 65536, 0, 131078, 65537, 0, 131078, 65538, 0, 131078, 65539, 0, 131078, 65540, 0, 131077, 65547, 0, 327682, 65548, 0, 196613, 65549, 0, 327681, 65550, 0, 2, 65551, 0, 1, 65557, 0, 65538, 196601, 0, 65536, 196602, 0, 262148, 196603, 0, 196609, 196604, 0, 131078, 196605, 0, 131078, 196606, 0, 131078, 196607, 0, 131078, 131072, 0, 131078, 131073, 0, 131078, 131074, 0, 131078, 131075, 0, 131078, 131076, 0, 131077, 131078, 0, 7, 131079, 0, 262149, 131080, 0, 2, 131081, 0, 1, 131083, 0, 65538, 131085, 0, 65538, 131087, 0, 262146, 131088, 0, 262149, 131089, 0, 2, 131090, 0, 1, 131093, 0, 65538, 262138, 0, 131076, 262139, 0, 131078, 262140, 0, 131078, 262141, 0, 131078, 262142, 0, 131078, 262143, 0, 131078, 196608, 0, 131078, 196609, 0, 131078, 196610, 0, 131078, 196611, 0, 131078, 196612, 0, 196608, 196613, 0, 196612, 196614, 0, 196609, 196615, 0, 131077, 196617, 0, 65538, 196619, 0, 262146, 196620, 0, 262149, 196621, 0, 4, 196622, 0, 262148, 196623, 0, 196609, 196624, 0, 131077, 196626, 0, 65536, 196627, 0, 2, 196628, 0, 3, 196629, 0, 65537, 327674, 0, 131076, 327675, 0, 131078, 327676, 0, 131078, 327677, 0, 131078, 327678, 0, 131078, 327679, 0, 131078, 262144, 0, 131078, 262145, 0, 131078, 262146, 0, 131078, 262147, 0, 131078, 262148, 0, 131078, 262149, 0, 131078, 262150, 0, 131078, 262151, 0, 196610, 262152, 0, 2, 262153, 0, 131079, 262154, 0, 2, 262155, 0, 196611, 262156, 0, 131077, 262158, 0, 327682, 262159, 0, 196613, 262160, 0, 327683, 262164, 0, 65538, 393210, 0, 131076, 393211, 0, 131078, 393212, 0, 131078, 393213, 0, 131078, 393214, 0, 131078, 393215, 0, 131078, 327680, 0, 131078, 327681, 0, 131078, 327682, 0, 131078, 327683, 0, 131078, 327684, 0, 131072, 327685, 0, 196613, 327686, 0, 131073, 327687, 0, 131077, 327689, 0, 65538, 327691, 0, 131076, 327692, 0, 196608, 327693, 0, 262149, 327694, 0, 65537, 327696, 0, 65539, 327697, 0, 2, 327698, 0, 3, 327699, 0, 2, 327700, 0, 65540, 327702, 0, 65541, 458746, 0, 131076, 458747, 0, 131078, 458748, 0, 131078, 458749, 0, 131078, 458750, 0, 131078, 458751, 0, 131078, 393216, 0, 131078, 393217, 0, 131078, 393218, 0, 131078, 393219, 0, 131078, 393220, 0, 131077, 393222, 0, 65543, 393223, 0, 327685, 393224, 0, 2, 393225, 0, 65537, 393227, 0, 131076, 393228, 0, 131078, 393229, 0, 131077, 393231, 0, 0, 393232, 0, 65537, 393234, 0, 65538, 393236, 0, 65538, 393238, 0, 65538, 524282, 0, 131076, 524283, 0, 131078, 524284, 0, 131078, 524285, 0, 131078, 524286, 0, 131078, 524287, 0, 131078, 458752, 0, 131078, 458753, 0, 131078, 458754, 0, 131078, 458755, 0, 131078, 458756, 0, 131077, 458763, 0, 131076, 458764, 0, 131072, 458765, 0, 327685, 458766, 0, 262148, 458767, 0, 262147, 458769, 0, 65542, 458770, 0, 65537, 458772, 0, 262146, 458773, 0, 262149, 458774, 0, 65537, 589818, 0, 131076, 589819, 0, 131078, 589820, 0, 131078, 589821, 0, 131078, 589822, 0, 131078, 589823, 0, 131078, 524288, 0, 131078, 524289, 0, 131078, 524290, 0, 131078, 524291, 0, 131078, 524292, 0, 196608, 524293, 0, 196612, 524294, 0, 196612, 524295, 0, 262149, 524296, 0, 2, 524297, 0, 2, 524298, 0, 262148, 524299, 0, 196609, 524300, 0, 131077, 524302, 0, 131076, 524303, 0, 196608, 524304, 0, 8, 524307, 0, 0, 524308, 0, 327684, 524309, 0, 327683, 655354, 0, 65543, 655355, 0, 196613, 655356, 0, 131073, 655357, 0, 131078, 655358, 0, 131072, 655359, 0, 196613, 589824, 0, 196613, 589825, 0, 196613, 589826, 0, 196613, 589827, 0, 196613, 589828, 0, 196613, 589829, 0, 196613, 589830, 0, 196613, 589831, 0, 65544, 589834, 0, 65543, 589835, 0, 196613, 589836, 0, 327685, 589837, 0, 2, 589838, 0, 327684, 589839, 0, 196613, 589840, 0, 327685, 589841, 0, 2, 589842, 0, 262148, 589843, 0, 262147, 589845, 0, 65538, 720892, 0, 131076, 720893, 0, 131072, 720894, 0, 65544, 655378, 0, 65543, 655379, 0, 327683, 655381, 0, 6, 786428, 0, 327682, 786429, 0, 65544, 720915, 0, 6, 851964, 0, 6 )
+
+[node name="units" type="Node2D" parent="nav"]
+
+[node name="unit_spawn_pos" type="Position2D" parent="nav/units"]
+position = Vector2( 206.645, 263.624 )
+
+[node name="select" parent="." instance=ExtResource( 2 )]
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="tex" type="TextureRect" parent="ui"]
+margin_left = -39.5074
+margin_top = 411.296
+margin_right = 1060.49
+margin_bottom = 611.296
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ui/tex"]
+margin_left = 99.0
+margin_top = 56.0
+margin_right = 487.0
+margin_bottom = 163.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="square" type="Button" parent="ui/tex/HBoxContainer"]
+margin_right = 107.0
+margin_bottom = 107.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="triangle" type="Button" parent="ui/tex/HBoxContainer"]
+margin_left = 111.0
+margin_right = 218.0
+margin_bottom = 107.0
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+
+[node name="circle" type="Button" parent="ui/tex/HBoxContainer"]
+margin_left = 222.0
+margin_right = 329.0
+margin_bottom = 107.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 13 )
+custom_styles/normal = SubResource( 14 )
+
+[node name="random" type="Button" parent="ui/tex/HBoxContainer"]
+margin_left = 333.0
+margin_right = 440.0
+margin_bottom = 107.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/focus = SubResource( 17 )
+custom_styles/disabled = SubResource( 18 )
+custom_styles/normal = SubResource( 19 )
+
+[node name="unit_selected" type="Control" parent="ui/tex"]
+margin_left = -10.6149
+margin_right = 29.3851
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nb_of_unit" type="Label" parent="ui/tex/unit_selected"]
+margin_left = 825.0
+margin_top = 38.0
+margin_right = 1002.0
+margin_bottom = 157.0
+custom_fonts/font = ExtResource( 4 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="unit_selected" type="Label" parent="ui/tex/unit_selected"]
+margin_left = 796.034
+margin_top = 104.993
+margin_right = 1030.03
+margin_bottom = 185.993
+custom_fonts/font = SubResource( 21 )
+text = "units selected"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="random" type="Control" parent="ui/tex"]
+margin_left = -3.75104
+margin_top = 6.51608
+margin_right = 36.249
+margin_bottom = 46.5161
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="unit_position_random" type="CheckBox" parent="ui/tex/random"]
+margin_left = 672.384
+margin_top = 50.6076
+margin_right = 696.384
+margin_bottom = 74.6076
+rect_scale = Vector2( 1.52108, 1.52108 )
+hint_tooltip = "Randomize the units formation location"
+focus_mode = 0
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="random" type="Label" parent="ui/tex/random"]
+margin_left = 597.086
+margin_top = 84.9413
+margin_right = 1014.09
+margin_bottom = 235.941
+rect_scale = Vector2( 0.440165, 0.440165 )
+custom_fonts/font = SubResource( 22 )
+text = "Randomize the units 
+formation location"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
